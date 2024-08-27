@@ -4,7 +4,21 @@ local M = {}
 
 M.setup = function()
     require("dapui").setup({
-      icons = { expanded = "▾", collapsed = "▸" },
+  icons = { expanded = "v", collapsed = ">", current_frame = "*" },
+  controls = {
+    icons = {
+      pause = "􀊗",
+      play = "􀊃",
+      step_into = "↓",
+      step_over = "→",
+      step_out = "↑",
+      step_back = "←",
+      run_last = "↻",
+      terminate = "􀛶",
+      disconnect = "􀒉",
+    },
+    },
+--      icons = { expanded = "▾", collapsed = "▸" },
       mappings = {
         expand = { "<CR>", "<2-LeftMouse>" },
         open = "o",

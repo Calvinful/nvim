@@ -18,6 +18,8 @@ return {
 
 		config = function()
 			local dap = require("dap")
+			vim.keymap.set("n", "<Leader>c", dap.continue, {})
+
 			local dapui = require("dapui")
 			--C++ DAP Config
 			dap.adapters.lldb = {
@@ -67,24 +69,21 @@ return {
 			dap.configurations.c = dap.configurations.cpp
 
 			dap.listeners.before.attach.dapui_config = function()
-				print("dap should open")
 				dapui.open()
+
 			end
 			dap.listeners.before.launch.dapui_config = function()
-				print("dap should open")
 				dapui.open()
 			end
 			dap.listeners.before.event_terminated.dapui_config = function()
-				print("dap should close")
 				dapui.close()
 			end
 			dap.listeners.before.event_exited.dapui_config = function()
-				print("dap should close")
 				dapui.close()
 			end
-
+			
 			--vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint, {})
-			vim.keymap.set("n", "<Leader>c", dap.continue, {})
+			--vim.keymap.set("n", "<Leader>c", dap.continue, {})
 		end,
 	},
 }
