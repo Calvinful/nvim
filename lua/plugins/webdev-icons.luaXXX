@@ -23,7 +23,7 @@ return {
             default = true,
 
             -- Globally enable "strict" selection of icons
-            strict = false,
+            strict = true,
 
             -- Override by filename
             override_by_filename = {

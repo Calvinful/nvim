@@ -1,10 +1,11 @@
---require('config.settings')
---vim.opt.guifont = "SF Mono:h11,codicon:h12"
---fonts
---require('plugins/dap-virtual-text')
-vim.opt.guifont = "Monaco:h11,codicon:h12"
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+require('plugins.vimTree')
 
 --vim.opt.termguicolors = true
+--vim.opt.guifont = "FiraCode Nerd Font Mono:h9:cANSI"
 require('config.mappings')
 require('config.lazy')
 
