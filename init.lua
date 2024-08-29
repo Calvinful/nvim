@@ -1,4 +1,5 @@
 
+vim.g.mapleader = "\\"
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.tabstop = 4        -- Number of spaces that a <Tab> in the file counts for
