@@ -13,4 +13,4 @@ require('plugins.vimTree')
 --vim.opt.guifont = "FiraCode Nerd Font Mono:h9:cANSI"
 require('config.mappings')
 require('config.lazy')
-
+require('config.lastBinds')
