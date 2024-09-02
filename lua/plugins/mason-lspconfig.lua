@@ -11,7 +11,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "clangd" }
+        ensure_installed = { "clangd", "cmake"}
       })
     end
   },
@@ -24,6 +24,8 @@ return {
       lspconfig.clangd.setup{
         cmd = { "clangd", "--background-index" },
         filetypes = { "c", "cpp", "objc", "objcpp" },
+        root_dir = lspconfig.util.root_pattern("CMakeLists.txt", ".git"),
+        single_file_support = true,
         -- Add any other settings you want
       }
 
