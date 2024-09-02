@@ -49,3 +49,5 @@ vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 vim.keymap.set("n", "<leader><tab>p", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab with \+tab+p
 vim.keymap.set("n", "<leader><tab>o", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab with \+tab+o
 
+-- Terminal in current window command
+vim.keymap.set("n","<c-w><leader>", "<cmd>terminal<CR>", {desc = "terminal"})
