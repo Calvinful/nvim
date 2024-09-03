@@ -26,7 +26,7 @@ require("lazy").setup({
   spec = {
     -- import your plugins
     { import = "plugins" },
-    { import = "colors.colorschemes" },
+--    { import = "colors.colorschemes" },
   },
   {	
 		"akinsho/toggleterm.nvim",
@@ -41,9 +41,9 @@ require("lazy").setup({
   checker = { enabled = true },
 
 })
-
-  vim.api.nvim_create_autocmd("ColorSchemePre", {
-  callback = function(args)
-    require("lazy").load({ plugins = args.match, wait = true })
-  end,
-  })
+--
+ -- vim.api.nvim_create_autocmd("ColorSchemePre", {
+  --callback = function(args)
+   -- require("lazy").load({ plugins = args.match, wait = true })
+ -- end,
+ --})
