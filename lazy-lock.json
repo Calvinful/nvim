@@ -1,6 +1,6 @@
 {
   "alpha-nvim": { "branch": "main", "commit": "b6f4129302db197a7249e67a90de3f2b676de13e" },
-  "catppuccin": { "branch": "main", "commit": "4fd72a9ab64b393c2c22b168508fd244877fec96" },
+  "gen.nvim": { "branch": "main", "commit": "c9a73d8c0d462333da6d2191806ff98f2884d706" },
   "gitsigns.nvim": { "branch": "main", "commit": "899e993850084ea33d001ec229d237bc020c19ae" },
   "harpoon": { "branch": "harpoon2", "commit": "0378a6c428a0bed6a2781d459d7943843f374bce" },
   "lazy.nvim": { "branch": "main", "commit": "48b52b5cfcf8f88ed0aff8fde573a5cc20b1306d" },
