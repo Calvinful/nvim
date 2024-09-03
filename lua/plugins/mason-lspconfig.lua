@@ -19,7 +19,9 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require('lspconfig')
-
+    lspconfig.cmake.setup{
+        filetypes = { "cmake"},
+    }
       -- Configure clangd
       lspconfig.clangd.setup{
         cmd = { "clangd", "--background-index" },
