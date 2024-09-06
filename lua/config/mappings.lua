@@ -1,4 +1,5 @@
 vim.g.mapleader = "\\"
+vim.api.nvim_set_keymap('n', '<leader><Esc>', ':noh<CR>', { noremap = true, silent = true })
 
 --Debugging controls
 vim.api.nvim_set_keymap('n', '<Leader>b', "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { noremap = true, silent = true })
