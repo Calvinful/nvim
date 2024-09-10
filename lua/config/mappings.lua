@@ -52,3 +52,11 @@ vim.keymap.set("n", "<leader><tab>o", "<cmd>tabp<CR>", { desc = "Go to previous 
 
 -- Terminal in current window command
 vim.keymap.set("n","<c-w><leader>", "<cmd>terminal<CR>", {desc = "terminal"})
+
+--diagnostic in lsp
+-- Key mappings for navigating diagnostics
+vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>dl', function() vim.diagnostic.setloclist() end, { noremap = true, silent = true })
+

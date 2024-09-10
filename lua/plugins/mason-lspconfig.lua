@@ -24,7 +24,7 @@ return {
     }
       -- Configure clangd
       lspconfig.clangd.setup{
-        cmd = { "clangd", "--background-index" },
+        cmd = { "clangd", "--background-index", "--compile-commands-dir=build", "--query-driver=/home/cal/.espressif/tools/xtensa-esp-elf/*/bin/xtensa-esp-elf-*"},
         filetypes = { "c", "cpp", "objc", "objcpp" },
         root_dir = lspconfig.util.root_pattern("CMakeLists.txt", ".git"),
         single_file_support = true,
