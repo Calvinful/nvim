@@ -52,3 +52,7 @@ vim.keymap.set("n", "<leader><tab>o", "<cmd>tabp<CR>", { desc = "Go to previous 
 
 -- Terminal in current window command
 vim.keymap.set("n","<c-w><leader>", "<cmd>terminal<CR>", {desc = "terminal"})
+
+
+vim.keymap.set({ 'n', 'v' }, '<leader>g', ':Gen<CR>')
+
