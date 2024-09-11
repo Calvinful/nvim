@@ -24,7 +24,7 @@ return {
     }
       -- Configure clangd
       lspconfig.clangd.setup{
-        cmd = { "clangd", "--background-index" },
+        cmd = { "clangd","--compile-commands-dir=build", "--background-index" },
         filetypes = { "c", "cpp", "objc", "objcpp" },
         root_dir = lspconfig.util.root_pattern("CMakeLists.txt", ".git"),
         single_file_support = true,
