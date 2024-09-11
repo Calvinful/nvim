@@ -23,7 +23,7 @@ return {
 			local dapui = require("dapui")
 			--C++ DAP Config
 			dap.adapters.lldb = { --not lldb lol
-               id = 'gdb'
+               id = 'gdb',
 			   type = "executable",
 			   command = "gdb",
                args = {'--quiet','--interpreter=dap'},
