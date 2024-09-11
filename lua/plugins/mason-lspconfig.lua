@@ -24,7 +24,7 @@ return {
     }
       -- Configure clangd
       lspconfig.clangd.setup{
-        cmd = { "/home/cal/Downloads/esp-clang/bin/clangd"},
+        cmd = { "/home/cal/Downloads/esp-clang/bin/clangd", "--compile-commands-dir=build"},
         filetypes = { "c", "cpp", "objc", "objcpp" },
         root_dir = require('lspconfig').util.root_pattern("compile_commands.json", "CMakeLists.txt", ".git"),
 
