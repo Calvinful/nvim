@@ -60,3 +60,5 @@ vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev, { noremap = true, si
 vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float, { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>dl', function() vim.diagnostic.setloclist() end, { noremap = true, silent = true })
 
+
+
