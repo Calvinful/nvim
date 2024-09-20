@@ -1,4 +1,11 @@
 return {
+
+    --Springboot LSP config!
+    {'nvim-java/nvim-java',
+    config = function()
+        require("lspconfig").jdtls.setup({})
+    end,
+},
   -- Mason and related plugins
   {
     "williamboman/mason.nvim",

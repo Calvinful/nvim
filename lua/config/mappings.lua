@@ -56,3 +56,9 @@ vim.keymap.set("n","<c-w><leader>", "<cmd>terminal<CR>", {desc = "terminal"})
 
 vim.keymap.set({ 'n', 'v' }, '<leader>g', ':Gen<CR>')
 
+
+-- Key mappings for navigating diagnostics
+vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>dl', function() vim.diagnostic.setloclist() end, { noremap = true, silent = true })
