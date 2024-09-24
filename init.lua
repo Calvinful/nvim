@@ -1,5 +1,8 @@
+vim.env.JAVA_HOME = "/usr/local/opt/openjdk@17"
+vim.env.PATH = vim.env.JAVA_HOME .. "/bin:" .. vim.env.PATH
 
-
+--/usr/local/opt/openjdk@17/bin/java
+--
 vim.g.mapleader = "\\"
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1

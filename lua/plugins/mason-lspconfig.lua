@@ -1,11 +1,15 @@
 return {
+-- {
+--        'Calvinful/nvim-java',
+--       config = function()
+            --require('java').setup()
+--            require('lspconfig').jdtls.setup({})
+--           require("mason-registry").get_package("jdtls"):get_install_path() .. "/lombok.jar"
 
-    --Springboot LSP config!
-    {'nvim-java/nvim-java',
-    config = function()
-        require("lspconfig").jdtls.setup({})
-    end,
-},
+
+ --      end,
+--    },
+
   -- Mason and related plugins
   {
     "williamboman/mason.nvim",
@@ -18,7 +22,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "clangd", "cmake"}
+        ensure_installed = { "clangd", "cmake", "jdtls"} --questionable
       })
     end
   },
@@ -29,7 +33,9 @@ return {
     lspconfig.cmake.setup{
         filetypes = { "cmake"},
     }
-      -- Configure clangd
+      -- Configure jdtls 
+      lspconfig.jdtls.setup({})
+        --clangd
       lspconfig.clangd.setup{
         cmd = { "clangd","--compile-commands-dir=build", "--background-index" },
         filetypes = { "c", "cpp", "objc", "objcpp" },
