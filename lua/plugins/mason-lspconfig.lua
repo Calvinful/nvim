@@ -1,4 +1,5 @@
 return {
+
 -- {
 --        'Calvinful/nvim-java',
 --       config = function()
@@ -11,28 +12,41 @@ return {
 --    },
 
   -- Mason and related plugins
+  -- 
+  -- 
   {
     "williamboman/mason.nvim",
     build = ":MasonUpdate",
     config = function()
-      require("mason").setup()
+      require("mason").setup({})
     end
   },
   {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "clangd", "cmake", "jdtls"} --questionable
+        ensure_installed = { "clangd", "cmake", "jdtls" } --questionable
+        --ensure_installed = { "clangd", "cmake", "jdtls", "rust_analyzer" } --questionable
+        
+
       })
-    end
+    end,
+--        ["rust_analyzer"] = function ()
+--            require("rust-tools").setup {}
+--        end
   },
   {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require('lspconfig')
+      -- Rust Analyzer
+      -- Rust end
     lspconfig.cmake.setup{
         filetypes = { "cmake"},
     }
+   -- lspconfig.rust_analyzer.setup{
+   --     filetypes = {"rust","cargo","toml"},
+   -- }
       -- Configure jdtls 
       lspconfig.jdtls.setup({})
         --clangd

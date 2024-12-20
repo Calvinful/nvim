@@ -1,3 +1,5 @@
+
+
 vim.g.mapleader = "\\"
 vim.api.nvim_set_keymap('n', '<leader><Esc>', ':noh<CR>', { noremap = true, silent = true })
 
