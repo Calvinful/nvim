@@ -21,6 +21,7 @@
             "typescript",
             "vim",
              "yaml",
+             "rust",
 
 
     },
